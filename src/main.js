@@ -6,6 +6,8 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS']=true
+
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

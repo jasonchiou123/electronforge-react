@@ -17,6 +17,16 @@ module.exports = [
     },
   },
   // Put your webpack loader rules in this array.  This is where you would put
+  {
+    test: /\.jsx?$/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        exclude: /node_modules/,
+        presets: ['@babel/preset-react']
+      }
+    }
+  }
   // your ts-loader configuration for instance:
   /**
    * Typescript Example:
